@@ -32,3 +32,4 @@ class GoalFunction:
         output.append(self.minOrMax)
 
         return output
+
