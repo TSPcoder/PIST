@@ -4,8 +4,8 @@ class GoalFunction:
 
     """
     Defining of the Goal function
-    Variables  :coeff list  ,
-                boolean (true if max si max, false if min)
+    Variables  : - coeff list
+                 - boolean (true if max si max, false if min)
 
     E.g : if z = 3x1 + 4x2 + 5
           if we want to maximize z
@@ -17,7 +17,7 @@ class GoalFunction:
 
     # CONSTRUCTOR
     def __init__(self,myCoeffs=[0,0,0],myMinOrMax=True):
-        self.coeffs=myCoeffs
+        self.coeffsFunction=myCoeffs
         self.minOrMax=myMinOrMax
 
 
@@ -25,7 +25,7 @@ class GoalFunction:
 
     def normalize(self):
         output= []
-        temp = self.coeffs
+        temp = self.coeffsFunction
         for elt in temp :
             output.append(elt)
 
