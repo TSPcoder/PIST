@@ -33,3 +33,4 @@ class GoalFunction:
 
         return output
 
+
