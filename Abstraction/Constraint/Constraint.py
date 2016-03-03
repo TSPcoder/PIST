@@ -32,9 +32,9 @@ class Constraint :
 
 
         else:
-            if self.operatorConstraint == ">=" or self.operatorConstraint == ">"
-            for elt in temp :
-                outPut.append(-elt)
+            if self.operatorConstraint == ">=" or self.operatorConstraint == ">":
+                for elt in temp :
+                    outPut.append(-elt)
 
             outPut.append(True)
 
