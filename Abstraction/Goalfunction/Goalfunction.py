@@ -5,7 +5,7 @@ class GoalFunction:
     """
     Defining of the Goal function
     Variables  : - coeff list
-                 - boolean (true if max si max, false if min)
+                 - boolean (true if max , false if min)
 
     E.g : if z = 3x1 + 4x2 + 5
           if we want to maximize z
