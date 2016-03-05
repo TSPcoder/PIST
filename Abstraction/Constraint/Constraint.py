@@ -10,7 +10,7 @@ class Constraint :
 
     """
 
-    def __init__(self, myCoeffs = [1, 1, 1], myOperator= "<"):
+    def __init__(self, myCoeffs = [1, 1, 1], myOperator = "<"):
         self.coeffsConstraint = myCoeffs
         self.operatorConstraint = myOperator
 
