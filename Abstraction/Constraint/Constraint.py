@@ -1,7 +1,7 @@
 # -*-coding:utf-8 -*
 
 class Constraint :
-   #yo testeste
+   #yo testestekkkkkkkkkkkk
     """
     Defining of a constraint
 
