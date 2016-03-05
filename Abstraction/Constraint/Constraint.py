@@ -8,6 +8,8 @@ class Constraint :
                 - constant
                 - operator (String)
 
+                llllllllllllllllllllllllllllllllllll
+
     """
 
     def __init__(self, myCoeffs = [1, 1, 1], myOperator = "<"):
