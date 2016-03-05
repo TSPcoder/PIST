@@ -1,19 +1,18 @@
 # -*-coding:utf-8 -*
 
 class Constraint :
-   #yo testestekkkkkkkkkkkkkk hyoyoyyoo
     """
     Defining of a constraint
 
     Variables : - coeffs list
                 - constant
-                - operateur ( a String )
+                - operator (String)
 
     """
 
-    def __init__(self, myCoeffs=[1,1,1], myOperator= "<"):
-        self.coeffsConstraint=myCoeffs
-        self.operatorConstraint=myOperator
+    def __init__(self, myCoeffs = [1, 1, 1], myOperator= "<"):
+        self.coeffsConstraint = myCoeffs
+        self.operatorConstraint = myOperator
 
 
 
@@ -30,7 +29,6 @@ class Constraint :
             else:
                 outPut.append(True)
 
-
         else:
             if self.operatorConstraint == ">=" or self.operatorConstraint == ">":
                 for elt in temp :
@@ -38,14 +36,4 @@ class Constraint :
 
             outPut.append(True)
 
-
-
         return outPut
-
-
-
-
-
-
-
-
