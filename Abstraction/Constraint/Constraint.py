@@ -7,9 +7,6 @@ class Constraint :
     Variables : - coeffs list
                 - constant
                 - operator (String)
-
-                llllllllllllllllllllllllllllllllllll
-
     """
 
     def __init__(self, myCoeffs = [1, 1, 1], myOperator = "<"):
