@@ -2,7 +2,7 @@
 
 class Constraint :
     """
-    Defining of a constraint
+    Definition of a constraint
 
     Variables : - coeffs list
                 - constant
