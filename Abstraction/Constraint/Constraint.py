@@ -3,7 +3,7 @@
 class Constraint :
     """
     Definition of a constraint
-kkkkkkkk
+kkkkkkkk lllll
     Variables : - coeffs list
                 - constant
                 - operator (String)
