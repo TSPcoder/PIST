@@ -1,28 +1,59 @@
 
-# On importe Tkinter
+# Autor : Aymeric ALOUGES
 
 from tkinter import *
 
+#Creation of our window
+from tkinter.ttk import Labelframe
 
-# On crée une fenêtre, racine de notre interface
+window = Tk()
 
-fenetre = Tk()
+#set the window fulscreen
+#window.attributes('-fullscreen', 1)
 
+#Top of the GUI
+FrameTop = Frame(window, borderwidth=0, relief=GROOVE)
+FrameTop.pack(side="top")
 
-# On crée un label (ligne de texte) souhaitant la bienvenue
+FrameModification = Labelframe(FrameTop, borderwidth=0, relief=GROOVE,text="Modification de la Contrainte")
+Label(FrameModification, text = 'Nom de la contrainte').grid(row =1, column =1, columnspan =2, padx =10, pady =5)
+Label(FrameModification, text = 'Affichage constrainte').grid(row =2, column =1, columnspan =2, padx =10, pady =5)
+Button(FrameModification, text ='Modifier').grid(row =3, column =1, columnspan =2, padx =10, pady =5)
+Button(FrameModification, text ='décaler à gauche').grid(row =4, column =1, padx =10, pady =2.5, stick = E)
+Button(FrameModification, text ='décaler à droite').grid(row =4, column =2,padx =10, pady =5, stick = W)
+Button(FrameModification, text ='décaler en haut').grid(row =5, column =1,padx =10, pady =5, stick = E)
+Button(FrameModification, text ='décaler en bas').grid(row =5, column =2, padx =10, pady =5, stick = W)
+Button(FrameModification, text ='tourner sens horaire').grid(row =6, column =1, padx =10, pady =5, stick = E)
+Button(FrameModification, text ='tourner sens anti horaire').grid(row =6, column =2, padx =10, pady =5, stick = W)
+Button(FrameModification, text ='Supprimer').grid(row =7, column =1, columnspan =2, padx =10, pady =5)
+FrameModification.pack(side="left", padx=5, pady=5)
 
-# Note : le premier paramètre passé au constructeur de Label est notre
+FrameGraphic = Labelframe(FrameTop, borderwidth=0, relief=GROOVE,text="Interpretation Géometrique")
+Canvas(FrameGraphic,bg='dark grey',height=700,width=1500).pack()
+FrameGraphic.pack(side="left", padx=5, pady=5)
 
-# interface racine
+#Bottom of the GUI
+FrameBottom = Frame(window, borderwidth=0, relief=GROOVE)
+FrameBottom.pack(side = "bottom")
 
-champ_label = Label(fenetre, text="Salut les Zér0s !")
+FrameButtons = Frame(FrameBottom, borderwidth=0, relief=GROOVE)
+Button(FrameButtons, text ='Lancer la résolution').pack(side="bottom", padx=5, pady=5)
+Button(FrameButtons, text ='Fonction objectif').pack(side="bottom", padx=5, pady=5)
+Button(FrameButtons, text ='Ajouter une Contrainte').pack(side="bottom", padx=5, pady=5)
+FrameButtons.pack(side="left", padx=0, pady=0)
 
+FrameConstraints = Labelframe(FrameBottom, borderwidth=0, relief=GROOVE,text="Constraintes")
+listConstraints = Listbox(FrameConstraints)
+listConstraints.insert(1,"contraint 1")
+listConstraints.insert(2,"contraint 2")
+listConstraints.insert(3,"contraint 3")
+listConstraints.pack()
+FrameConstraints.pack(side="left", padx=5, pady=5)
 
-# On affiche le label dans la fenêtre
+FrameResults = Labelframe(FrameBottom, borderwidth=0, relief=GROOVE,text="Résultat")
+labelResults = Label(FrameResults, text="Résultats", bg="white")
+labelResults.pack()
+FrameResults.pack(side="left", padx=5, pady=5)
 
-champ_label.pack()
-
-
-# On démarre la boucle Tkinter qui s'interompt quand on ferme la fenêtre
-
-fenetre.mainloop()
+# Tkinter loop
+window.mainloop()
