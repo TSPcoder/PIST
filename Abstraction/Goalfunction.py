@@ -17,7 +17,7 @@ class GoalFunction:
 
     # CONSTRUCTOR
     def __init__(self,myCoeffs=[0,0,0],myMinOrMax=True):
-        self.coeffsFunction=myCoeffs
+        self.coFunction=myCoeffs
         self.minOrMax=myMinOrMax
 
 
@@ -25,12 +25,24 @@ class GoalFunction:
 
     def normalize(self):
         output= []
-        temp = self.coeffsFunction
-        for elt in temp :
-            output.append(elt)
+        temp = self.coFunction
+        if self.minOrMax == True :
+            for elt in temp :
+                output.append(elt)
 
-        output.append(self.minOrMax)
+
+
+        else :
+            for elt in temp :
+                output.append(-elt)
+
+
+        output.append(0)
 
         return output
+
+
+
+
 
 
