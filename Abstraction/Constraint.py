@@ -2,7 +2,7 @@
 
 
 class Constraint :
-   #yo testestekkkkkkkkkkkk
+   #yo testestekkkkkkkkkkkk etstest222
     """
     Defining of a constraint
 
